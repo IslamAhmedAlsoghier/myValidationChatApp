@@ -62,18 +62,41 @@ class _HomeSreenState extends State<HomeSreen> {
                     const SizedBox(
                       height: 70,
                     ),
-                    CustomButton(
-                      text: 'Login',
-                      onPressed: () {
-                        Future.delayed(Duration.zero, () {
-                          if (_loginFormKey.currentState?.validate() ?? false) {
-                            print('A7A');
-                          }
-                        });
-                      },
-                      backGroundColor: Colors.blue,
-                      foreGrounCcolor: Colors.white,
+                    Container(
+                      height: 60,
+                      width: 500,
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                WidgetStateProperty.all(Colors.blue),
+                            foregroundColor:
+                                WidgetStateProperty.all(Colors.white),
+                          ),
+                          onPressed: () {
+                            if (_loginFormKey.currentState?.validate() ??
+                                false) {
+                              print('A7A');
+                            }
+                            ;
+                          },
+                          child: CustomText(
+                            text: 'Login',
+                            fontsize: 20,
+                            fontweight: FontWeight.w300,
+                          )),
                     ),
+                    // CustomButton(
+                    //   text: 'Login',
+                    //   onPressed: () {
+                    //     Future.delayed(Duration.zero, () {
+                    //       if (_loginFormKey.currentState?.validate() ?? false) {
+                    //         print('A7A');
+                    //       }
+                    //     });
+                    //   },
+                    //   backGroundColor: Colors.blue,
+                    //   foreGrounCcolor: Colors.white,
+                    // ),
                     const SizedBox(
                       height: 250,
                     ),
